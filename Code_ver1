@@ -1,0 +1,17 @@
+#This version is virtually the same as with ver0
+#Make a guessing game with limited number of guesses
+password = "Blackfire"
+guesses = input("Enter your guess: ") #Here, compare to ver0, you ask the same question and still get 3 guesses only. 
+guesses_count = 0
+guesses_limit = 3
+out_of_guesses = False
+while guesses != password and not(out_of_guesses):
+    if guesses_count < guesses_limit:
+        guesses = input("Enter guess: ")
+        guesses_count += 1
+    else:
+        out_of_guesses = True
+if out_of_guesses:
+    print("Out of guesses, you lose!")
+else:
+    print("You win!")
