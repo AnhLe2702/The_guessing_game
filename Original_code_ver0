@@ -5,7 +5,8 @@ guesses_count = 0
 guesses_limit = 3
 out_of_guesses = False
 
-while guesses != password and not(out_of_guesses):
+while guesses != password and not(out_of_guesses): #Notice the "not(out_of_guesses)" condition. The out_of_guesses is set to be False. So by saying not(out_of_guesses), this means
+                                                    the statement is "True" meaning it is indeed NOT out of guess. 
     if guesses_count < guesses_limit:
         guesses = input("Enter guess: ")
         guesses_count += 1
