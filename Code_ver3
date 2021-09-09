@@ -1,0 +1,20 @@
+#Make a guessing game with limited number of guesses
+password = "Blackfire"
+guesses = ""
+guesses_count = 0
+guesses_limit = 3
+out_of_guesses = False
+
+while guesses != password and out_of_guesses: #Notice now it is just "out_of_guesses" => this means that this statement is always False as long as we stated it as False => which
+                                               means we never run out of guesses => This means the whole "if and else" statement follow up is not considered, the "if 
+                                               out_of_guesses" statement is also not considered because out_of_guesses is wrong => So Python will print the final statement 
+                                               "You win" instead.                                              
+    if guesses_count < guesses_limit:
+        guesses = input("Enter guess: ")
+        guesses_count += 1
+    else:
+        out_of_guesses = True
+if out_of_guesses:
+    print("Out of guesses, you lose!")
+else:
+    print("You win!")
