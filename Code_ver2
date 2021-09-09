@@ -1,0 +1,14 @@
+#Make a guessing game with limited number of guesses
+password = "Blackfire"
+guesses = ""
+guesses_count = 0
+guesses_limit = 3
+out_of_guesses = False
+#Compare to ver0, here we got rid of the "while" statement and use the "if" statement to state our conditions that if our guesses are different from the actual password and that
+the number of guesses are still less than the limit 3, then we can "Enter guess"). However, with these commands, Python will only give you 1 chance to guess because there is NO
+loop statement. Once the If statement is executed, the code is done. 
+if guesses != password and guesses_count < guesses_limit:
+    guesses = input("Enter guess: ")
+    guesses_count += 1
+else:
+    print("You lost")
