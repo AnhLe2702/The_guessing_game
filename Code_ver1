@@ -1,7 +1,7 @@
 #This version is virtually the same as with ver0
 #Make a guessing game with limited number of guesses
 password = "Blackfire"
-guesses = input("Enter your guess: ") #Here, compare to ver0, you ask the same question and still get 3 guesses only. 
+guesses = input("Enter your guess: ") #Here, compare to ver0, you ask the same question and this time Python will actually give you 4 chances NOT 3. 
 guesses_count = 0
 guesses_limit = 3
 out_of_guesses = False
