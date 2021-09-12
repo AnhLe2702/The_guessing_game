@@ -1,0 +1,21 @@
+#Make a guessing game with limited number of guesses
+password = "Blackfire"
+guesses = ""
+guesses_count = 0
+guesses_limit = 3
+out_of_guesses = True #Note here we change this boolean value to True instead of False. This code will give us 2 sets of outcome. If we failed to guess the correct password after
+                       3 tries, Python will still running but we will not get anymore guesses. This is because when this is True, the "while" command is matched and so we get 3 
+                       guesses. But since we also have the "if out_of_guesses:" command, Python will be confused and cannot continue => We need to end the run manually. 
+                       The second scenario when we get the password correctly. This means the "while" command is no longer true and Python will jump to the "if out_of_guesses" 
+                       command and print out "Out of guesses, you lose!".
+
+while guesses != password and out_of_guesses:
+    if guesses_count < guesses_limit:
+        guesses = input("Enter guess: ")
+        guesses_count += 1
+    else:
+        out_of_guesses = True
+if out_of_guesses:
+    print("Out of guesses, you lose!")
+else:
+    print("You win!")
