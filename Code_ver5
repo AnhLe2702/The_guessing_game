@@ -1,0 +1,22 @@
+password = "Blackfire"
+guesses = ""
+guesses_count = 0
+guesses_limit = 3
+out_of_guesses = False
+
+while guesses_count < guesses_limit and not(out_of_guesses): #Notice here we swap the "guesses_count < guesses_limit" with "guesses != password" compared to Ver0. In this version,
+                                                              if we get 3 guesses wrong, the "while" loop is broken because now the number of guesses will be larger than the limit.
+                                                              Python, therefore, will jump to "if out_of_guesses:" command to check. But because we set this to be False, it will
+                                                              jump to "else" and print out "You win!". 
+                                                              If we get the password correctly within 3 guesses, Python will jump to "else" command and set the "out_of_guesses" 
+                                                              to be True. And because of this, now "if out_of_guesses" will also be True and therefore, Python will print out 
+                                                              "Out of guesses, you lose!".
+    if guesses != password:
+        guesses = input("Enter guess: ")
+        guesses_count += 1
+    else:
+        out_of_guesses = True
+if out_of_guesses:
+    print("Out of guesses, you lose!")
+else:
+    print("You win!")
